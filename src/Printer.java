@@ -26,11 +26,13 @@ public class Printer {
                 '}';
     }
 
-    public void print(){
-        System.out.println(this.isOn + " " + getModelNumber());
+    public void print() {
+        if (isOn) {
+            System.out.println(this.isOn + " " + getModelNumber());
+        }
     }
 
-    public void print(String string){
+    public void print(String string) {
         System.out.println(string);
     }
 }
