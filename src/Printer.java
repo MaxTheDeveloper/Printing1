@@ -42,9 +42,9 @@ public class Printer {
     public void print(String text, int copies) {
         if (isOn) {
             for (int i = 0; i < copies; i++) {
-                System.out.println(text + " " + copies);
+                System.out.println(text + " " + i);
             }
-            System.out.println();
+            System.out.println(copies);
         }
     }
 
@@ -56,7 +56,7 @@ public class Printer {
         }*/
         for (Colors c:Colors.values()
              ) {
-            System.out.println(Colors.values());
+            System.out.println(c);
         }
     }
 }
