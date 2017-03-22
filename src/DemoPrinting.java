@@ -3,9 +3,11 @@
  */
 public class DemoPrinting {
     public static void main(String[] args) {
-        Printer printer = new Printer(true,"Cannon mp320");
+        Printer printer = new Printer("Cannon mp320");
         printer.print();
-        printer.print("text",3);
+        printer.print("text", 3);
+        printer.turnOff();
+        printer.print("text", 3);
         printer.printColors();
     }
 }

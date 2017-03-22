@@ -2,23 +2,17 @@
  * Created by MUtemov on 15.03.2017.
  * Anatoliy on 22.03.2017
  */
-public class Printer {
-    boolean isOn;
-    String modelNumber;
+public class Printer extends Machine {
+    private String modelNumber;
 
-    public Printer(boolean isOn, String modelNumber) {
-        this.isOn = isOn;
+    public Printer(String modelNumber) {
+        super(true);
         this.modelNumber = modelNumber;
-    }
-
-    public boolean getIsOn() {
-        return isOn;
     }
 
     public String getModelNumber() {
         return modelNumber;
     }
-
 
     @Override
     public String toString() {
@@ -30,14 +24,10 @@ public class Printer {
 
     public void print() {
         if (isOn) {
-            System.out.println("Принтер" + " " + getModelNumber() + " " + "включен");
+            System.out.println("Принтер " + getModelNumber() + " включен");
         } else {
-            System.out.println("Принтер" + " " + getModelNumber() + " " +"выключен!");
+            System.out.println("Принтер " + getModelNumber() + " выключен!");
         }
-    }
-
-    public void print(String text) {
-        System.out.println(text);
     }
 
     public void print(String text, int copies) {
@@ -45,16 +35,12 @@ public class Printer {
             for (int i = 0; i < copies; i++) {
                 System.out.println(text + " " + i);
             }
-            System.out.println(copies);
         }
+        else
+            System.out.println("Принтер " + getModelNumber() + " выключен, печать невозможна");
     }
 
     public void printColors() {
-        /*String[] colors = {"Red", "Green", "Blue"};
-        for (String x : colors
-                ) {
-            System.out.println(x);
-        }*/
         for (Colors c:Colors.values()
              ) {
             System.out.println(c);
