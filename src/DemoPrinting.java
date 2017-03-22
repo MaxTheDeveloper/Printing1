@@ -5,5 +5,7 @@ public class DemoPrinting {
     public static void main(String[] args) {
         Printer printer = new Printer(true,"Cannon mp320");
         printer.print();
+        printer.print("text",3);
+        printer.printColors();
     }
 }
