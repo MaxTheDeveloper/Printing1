@@ -1,5 +1,6 @@
 /**
  * Created by MUtemov on 15.03.2017.
+ * Anatoliy on 22.03.2017
  */
 public class Printer {
     boolean isOn;
