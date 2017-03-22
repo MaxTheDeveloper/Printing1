@@ -29,9 +29,9 @@ public class Printer {
 
     public void print() {
         if (isOn) {
-            System.out.println("Принтер" + " " + getModelNumber() + "включен");
+            System.out.println("Принтер" + " " + getModelNumber() + " " + "включен");
         } else {
-            System.out.println("Принтер" + " " + getModelNumber() + "выключен!");
+            System.out.println("Принтер" + " " + getModelNumber() + " " +"выключен!");
         }
     }
 
@@ -49,10 +49,14 @@ public class Printer {
     }
 
     public void printColors() {
-        String[] colors = {"Red", "Green", "Blue"};
+        /*String[] colors = {"Red", "Green", "Blue"};
         for (String x : colors
                 ) {
             System.out.println(x);
+        }*/
+        for (Colors c:Colors.values()
+             ) {
+            System.out.println(Colors.values());
         }
     }
 }
