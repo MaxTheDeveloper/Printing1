@@ -17,13 +17,13 @@ public class Printer extends Machine {
     @Override
     public String toString() {
         return "Printer{" +
-                "isOn=" + isOn +
+                "isOn=" + checkIsOn() +
                 ", modelNumber='" + modelNumber + '\'' +
                 '}';
     }
 
     public void print() {
-        if (isOn) {
+        if (checkIsOn()) {
             System.out.println("Принтер " + getModelNumber() + " включен");
         } else {
             System.out.println("Принтер " + getModelNumber() + " выключен!");
@@ -31,7 +31,7 @@ public class Printer extends Machine {
     }
 
     public void print(String text, int copies) {
-        if (isOn) {
+        if (checkIsOn()) {
             for (int i = 0; i < copies; i++) {
                 System.out.println(text + " " + i);
             }
