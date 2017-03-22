@@ -10,13 +10,14 @@ public class Printer {
         this.modelNumber = modelNumber;
     }
 
-    public boolean isOn() {
+    public boolean getIsOn() {
         return isOn;
     }
 
     public String getModelNumber() {
         return modelNumber;
     }
+
 
     @Override
     public String toString() {
@@ -28,11 +29,14 @@ public class Printer {
 
     public void print() {
         if (isOn) {
-            System.out.println(this.isOn + " " + getModelNumber());
+            System.out.println("Принтер" + " " + getModelNumber() + "включен");
+        }
+        else {
+            System.out.println("Принтер" + " " + getModelNumber() + "выключен!");
         }
     }
 
-    public void print(String string) {
-        System.out.println(string);
+    public void print(String text) {
+        System.out.println(text);
     }
 }
