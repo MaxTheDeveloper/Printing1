@@ -8,5 +8,8 @@ public class DemoPrinting {
         printer.loadPaper(3);
         printer.print("text", 5);
         printer.printColors();
+        Scanner scanner = new Scanner();
+        scanner.turnOn();
+        scanner.turnOff();
     }
 }
