@@ -2,13 +2,15 @@
  * Created by MUtemov on 15.03.2017.
  * Anatoliy on 22.03.2017
  */
-public class Printer extends Machine {
+public class Printer implements IMachine {
     private String modelNumber;
     private PaperTray paperTray = new PaperTray();
+    private boolean isOn;
+
 
     public Printer(String modelNumber) {
-        super(true);
         this.modelNumber = modelNumber;
+        isOn = true;
     }
 
     public String getModelNumber() {
@@ -48,6 +50,24 @@ public class Printer extends Machine {
              ) {
             System.out.println(c);
         }
+    }
+
+    boolean checkIsOn() {
+            return isOn;
+    }
+
+
+
+    @Override
+    public void turnOn() {
+        isOn = true;
+        System.out.println("Machine is on!");
+    }
+
+    @Override
+    public void turnOff() {
+        isOn = false;
+        System.out.println("Machine is off");
     }
 
     @Override
