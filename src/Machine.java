@@ -8,11 +8,13 @@ public class Machine {
     }
 
     public void turnOn() {
+        System.out.println("Machine is on!");
         isOn = true;
     }
 
     public void turnOff() {
         isOn = false;
+        System.out.println("Machine is off");
     }
 
     boolean checkIsOn() {
