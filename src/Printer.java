@@ -5,12 +5,11 @@
 public class Printer implements IMachine {
     private String modelNumber;
     private PaperTray paperTray = new PaperTray();
-    private boolean isOn;
-
+    IMachine iMachine;
 
     public Printer(String modelNumber) {
         this.modelNumber = modelNumber;
-        isOn = true;
+        iMachine = new Machine(true);
     }
 
     public String getModelNumber() {
@@ -52,21 +51,22 @@ public class Printer implements IMachine {
         }
     }
 
-    boolean checkIsOn() {
-            return isOn;
+    @Override
+    public boolean checkIsOn() {
+            return iMachine.checkIsOn();
     }
 
 
 
     @Override
     public void turnOn() {
-        isOn = true;
+        iMachine.turnOn();
         System.out.println("Machine is on!");
     }
 
     @Override
     public void turnOff() {
-        isOn = false;
+        iMachine.turnOff();
         System.out.println("Machine is off");
     }
 

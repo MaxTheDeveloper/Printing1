@@ -4,4 +4,5 @@
 public interface IMachine {
     void turnOn();
     void turnOff();
+    boolean checkIsOn();
 }
